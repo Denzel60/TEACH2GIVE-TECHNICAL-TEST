@@ -1,0 +1,65 @@
+<!-- Write a program that counts the number of vowels in a sentence. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vowel Counter</title>
+  <style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    #output {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Vowel Counter</h2>
+    <textarea id="inputText" placeholder="Enter a sentence"></textarea>
+    <button onclick="countVowels()">Count Vowels</button>
+    <div id="output"></div>
+  </div>
+  <script>
+    function countVowels() {
+        var inputText = document.getElementById("inputText").value.toLowerCase();
+        var vowelCount = 0;
+        var vowels = ["a", "e", "i", "o", "u"];
+
+        for (var i = 0; i < inputText.length; i++) {
+            if (vowels.includes(inputText[i])) {
+                vowelCount++;
+            }
+        }
+
+        document.getElementById("output").innerText = "Number of vowels: " + vowelCount;
+    }
+  </script>
+</body>
+</html>
