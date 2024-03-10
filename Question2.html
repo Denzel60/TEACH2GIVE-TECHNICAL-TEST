@@ -1,0 +1,38 @@
+<!-- Write a program to generate the Fibonacci sequence up to 100. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence</title>
+    <style>
+        /* Add some basic styling for readability */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Initialize the first two Fibonacci numbers
+        let firstTerm = 0;
+        let secondTerm = 1;
+
+        // Display the first two terms
+        console.log(firstTerm);
+        console.log(secondTerm);
+
+        // Generate the remaining terms up to 100
+        for (let i = 2; i < 100; i++) {
+            const nextTerm = firstTerm + secondTerm;
+            console.log(nextTerm);
+
+            // Update the terms for the next iteration
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    </script>
+</body>
+</html>
+
